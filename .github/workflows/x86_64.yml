@@ -21,7 +21,7 @@ env:
   CONFIG_FILE: x86.config
   DIY_SH: scripts.sh
   SSH_ACTIONS: false
-  UPLOAD_BIN_DIR: true
+  UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_WETRANSFER: false
   UPLOAD_COWTRANSFER: false
