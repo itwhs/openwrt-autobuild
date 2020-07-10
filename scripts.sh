@@ -43,7 +43,7 @@ git clone https://github.com/tty228/luci-app-serverchan.git package/OpenWrtApps/
 git clone https://github.com/Mrbai98/luci-theme-atmaterial.git package/OpenWrtApps/luci-theme-atmaterial
 
 #filebrowser
-git clone https://github.com/project-openwrt/openwrt package/CTCGFW-package
+# git clone https://github.com/project-openwrt/openwrt package/CTCGFW-package
 
 
 echo "done"
