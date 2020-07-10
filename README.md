@@ -37,23 +37,23 @@
 
 ## 变量
 
-| 变量名                                                      | 释义                                 |
-| :---------------------------------------------------------- | :----------------------------------- |
-| -- REPO_URL: <https://github.com/coolsnowwolf/lede.git>     | 定义源码                             |
-| -- REPO_BRANCH: master                                      | 定义分支                             |
-| -- FEEDS_CONF: feeds.conf.default                           | 自定义 feeds 配置文件                |
-| -- CONFIG_FILE: *.config                                     | 自定义编译配置                       |
-| -- DIY_SH: diy-part1.sh                                     | 定义`feeds.conf.default`脚本文件     |
-|                                                             | 定义自定义默认IP，登陆密码等脚本文件 |
-| -- SSH_ACTION: false                                        | 是否打开 SSH                         |
-| -- UPLOAD_BRANCH: true                                      | 是否创建分支来存放编译固件及Package  |
-| -- BRANCH: Lean｜Snapshot                                   | 分支名称                             |
-| -- GITHUB_USER_NAME: Draco-china                            | 定义Github用户名                     |
-| -- GITHUB_USER_EMAIL: ${{ secrets.EMAIL }}                  | 定义Github用户邮箱                   |
-| -- GITHUB: github.com/Draco-china/OpenWrt-Actions-R7800.git | 定义上传分支                         |
-| -- UPLOAD_FIRMWARE: true                                    | 是否上传固件                         |
-| -- UPLOAD_COWTRANSFER: false                                | 是否上传固件到奶牛快传               |
-| -- UPLOAD_TMP_LINK: false                                   | 上传到TMP.link                       |
-| -- CREATE_RELEASE: true                                     | 是否创建发行版本 Release             |
-| -- BUILD_USER: Draco-china                                  | 定义编译者                           |
-| -- SEND_WECHAT_MSG: false                                   | 是否微信通知                         |
+| 变量名                                                  | 释义                                 |
+| :------------------------------------------------------ | :----------------------------------- |
+| -- REPO_URL: <https://github.com/coolsnowwolf/lede.git> | 定义源码                             |
+| -- REPO_BRANCH: master                                  | 定义分支                             |
+| -- FEEDS_CONF: feeds.conf.default                       | 自定义 feeds 配置文件                |
+| -- CONFIG_FILE: *.config                                | 自定义编译配置                       |
+| -- DIY_SH: script.sh                                    | 定义`feeds.conf.default`脚本文件     |
+|                                                         | 定义自定义默认IP，登陆密码等脚本文件 |
+| -- SSH_ACTION: false                                    | 是否打开 SSH                         |
+| -- UPLOAD_BRANCH: true                                  | 是否创建分支来存放编译固件及Package  |
+| -- BRANCH: Lean｜Snapshot                               | 分支名称                             |
+| -- GITHUB_USER_NAME: LinuxUnion                         | 定义Github用户名                     |
+| -- GITHUB_USER_EMAIL: ${{ secrets.EMAIL }}              | 定义Github用户邮箱                   |
+| -- GITHUB: github.com/be-engineer/openwrt-autobuild.git | 定义上传分支                         |
+| -- UPLOAD_FIRMWARE: true                                | 是否上传固件                         |
+| -- UPLOAD_COWTRANSFER: false                            | 是否上传固件到奶牛快传               |
+| -- UPLOAD_TMP_LINK: false                               | 上传到TMP.link                       |
+| -- CREATE_RELEASE: true                                 | 是否创建发行版本 Release             |
+| -- BUILD_USER: LinuxUnion                               | 定义编译者                           |
+| -- SEND_WECHAT_MSG: false                               | 是否微信通知                         |
