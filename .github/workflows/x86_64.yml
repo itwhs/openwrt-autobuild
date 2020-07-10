@@ -22,7 +22,7 @@ env:
   DIY_SH: scripts.sh
   SSH_ACTIONS: true
   UPLOAD_BIN_DIR: false
-  UPLOAD_FIRMWARE: false
+  UPLOAD_FIRMWARE: true
   UPLOAD_WETRANSFER: false
   UPLOAD_COWTRANSFER: true
   TZ: Asia/Shanghai
