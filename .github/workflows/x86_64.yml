@@ -20,7 +20,7 @@ env:
   REPO_BRANCH: master
   CONFIG_FILE: x86.config
   DIY_SH: scripts.sh
-  SSH_ACTIONS: true
+  SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_WETRANSFER: false
@@ -137,20 +137,21 @@ jobs:
       #      当前使用版本:【编译前的最后一次[➦主源码](https://github.com/coolsnowwolf/lede)更新记录】
       #      ${{ env.useVersionInfo }}
       #    artifacts: ${{ env.FIRMWARE }}/*
-#奶牛快传
-      - name: Upload firmware to cowtransfer 
+      #奶牛快传
+      - name: Upload firmware to cowtransfer
         if: steps.organize.outputs.status == 'success' && env.UPLOAD_COWTRANSFER == 'true' && !cancelled()
         run: |
           curl -fsSL git.io/file-transfer | sh
           ./transfer cow --block 2621440 -s -p 64 --no-progress ${FIRMWARE} 2>&1 | tee cowtransfer.log
           echo "::warning file=cowtransfer.com::$(cat cowtransfer.log | grep https)"
-#
+      #
       - name: Upload firmware to WeTransfer
         if: steps.organize.outputs.status == 'success' && env.UPLOAD_WETRANSFER == 'true' && !cancelled()
         run: |
           curl -fsSL git.io/file-transfer | sh
           ./transfer wet -s -p 16 --no-progress ${FIRMWARE} 2>&1 | tee wetransfer.log
           echo "::warning file=wetransfer.com::$(cat wetransfer.log | grep https)"
-#微信通知          
       #- name: WeChat notification
       #  run: curl https://sc.ftqq.com/${{ secrets.ServerChan }}.send?text=${{ env.FILE_NAME }}发布成功-编译结束
+
+#微信通知
