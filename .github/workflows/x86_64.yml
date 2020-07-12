@@ -12,8 +12,8 @@ on:
       - "x86.config"
   watch:
     types: [started]
-#  schedule:
-#    - cron: 0 22 * * 0
+  schedule:
+    - cron: 0 8 * * *
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
