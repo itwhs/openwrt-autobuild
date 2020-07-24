@@ -7,7 +7,7 @@ on:
     types: published
   push:
     branches:
-      - master
+      - main
     paths:
       - "x86.config"
   watch:
@@ -119,7 +119,7 @@ jobs:
           echo "::set-env name=FIRMWARE::$PWD"
           echo "::set-output name=status::success"
       - name: Upload firmware directory
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@main
         if: steps.organize.outputs.status == 'success' && !cancelled()
         with:
           name: OpenWrt_firmware${{ env.DEVICE_NAME }}-${{ env.FILE_DATE }}
