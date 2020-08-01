@@ -2,18 +2,18 @@ name: Build openwrt-wdr7500
 # user:root
 #password: password
 
-on:
-  repository_dispatch:
-    types: [github.repository]
-  release:
-    types: published
-  push:
-    branches:
-      - main
-    paths:
-      - "wdr7500.config"
-  watch:
-    types: [started]
+#on:
+#  repository_dispatch:
+#    types: [github.repository]
+#  release:
+#    types: published
+#  push:
+#    branches:
+#      - main
+#    paths:
+#      - "wdr7500.config"
+#  watch:
+#    types: [started]
 #  schedule:
 #    - cron: 0 */48 * * *
 
