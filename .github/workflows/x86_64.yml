@@ -10,8 +10,8 @@ on:
       - main
     paths:
       - "x86_64.config"
-#  watch:
-#    types: [started]
+  watch:
+    types: [started]
   schedule:
     - cron: 0 */48 * * *
 
