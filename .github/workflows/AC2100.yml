@@ -19,7 +19,7 @@ on:
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: main
+  REPO_BRANCH: master
   CONFIG_FILE: AC2100.config
   DIY_SH: scripts.sh
   SSH_ACTIONS: true
