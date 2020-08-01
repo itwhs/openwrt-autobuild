@@ -1,4 +1,4 @@
-name: Build openwrt-AC2100
+name: Build openwrt-xiaomi-AC2100
 # user:root
 #password: password
 
@@ -28,8 +28,8 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_COWTRANSFER: true
   TZ: Asia/Shanghai
-  FILE_NAME: wdr7500
-  DEVICE_NAME: wdr7500
+  FILE_NAME: ac2100
+  DEVICE_NAME: ac2100
 
 jobs:
   build:
