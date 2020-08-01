@@ -11,7 +11,7 @@ on:
     branches:
       - main
     paths:
-      - "wdr7500.config"
+      - "AC2100.config"
   watch:
     types: [started]
 #  schedule:
@@ -19,8 +19,8 @@ on:
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: master
-  CONFIG_FILE: wdr7500.config
+  REPO_BRANCH: main
+  CONFIG_FILE: AC2100.config
   DIY_SH: scripts.sh
   SSH_ACTIONS: true
   UPLOAD_BIN_DIR: false
