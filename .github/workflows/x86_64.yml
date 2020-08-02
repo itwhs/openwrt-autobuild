@@ -18,6 +18,7 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
+  FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: x86_64.config
   DIY_SH: scripts.sh
   SSH_ACTIONS: false
