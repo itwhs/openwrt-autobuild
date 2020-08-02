@@ -1,5 +1,6 @@
 name: Build openwrt-xiaomi-AC2100
-# user:root
+# 固件登录账号
+#user:root
 #password: password
 
 on:
