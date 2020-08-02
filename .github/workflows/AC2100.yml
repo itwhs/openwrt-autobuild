@@ -23,14 +23,14 @@ env:
   REPO_BRANCH: master
   CONFIG_FILE: AC2100.config
   DIY_SH: scripts.sh
-  SSH_ACTIONS: false
+  SSH_ACTIONS: true
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_WETRANSFER: false
   UPLOAD_COWTRANSFER: true
   TZ: Asia/Shanghai
   FILE_NAME: ac2100
-  DEVICE_NAME: ac2100
+  #DEVICE_NAME: ac2100
 
 jobs:
   build:

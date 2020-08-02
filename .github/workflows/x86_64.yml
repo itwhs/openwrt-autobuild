@@ -1,5 +1,7 @@
 name: Build openwrt-x86_64
-
+# 固件登录账号
+# user:root
+#password: password
 on:
   repository_dispatch:
     types: [github.repository]
@@ -27,7 +29,7 @@ env:
   UPLOAD_COWTRANSFER: true
   TZ: Asia/Shanghai
   FILE_NAME: x86_64
-  DEVICE_NAME: x86-64
+  #DEVICE_NAME: x86-64
 
 jobs:
   build:
