@@ -26,11 +26,10 @@ env:
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
-  UPLOAD_WETRANSFER: false
+  UPLOAD_WETRANSFER: true
   UPLOAD_COWTRANSFER: true
   TZ: Asia/Shanghai
   FILE_NAME: wdr7500
-  #DEVICE_NAME: wdr7500
 
 jobs:
   build:
