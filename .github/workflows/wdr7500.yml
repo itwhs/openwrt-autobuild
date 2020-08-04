@@ -1,7 +1,4 @@
 name: Build openwrt-wdr7500
-# 固件登录账号
-# user:root
-#password: password
 
 on:
   repository_dispatch:
@@ -26,10 +23,11 @@ env:
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
-  UPLOAD_WETRANSFER: true
+  UPLOAD_WETRANSFER: false
   UPLOAD_COWTRANSFER: true
   TZ: Asia/Shanghai
   FILE_NAME: wdr7500
+  #DEVICE_NAME: wdr7500
 
 jobs:
   build:
@@ -76,7 +74,7 @@ jobs:
           $GITHUB_WORKSPACE/$DIY_SH
       - name: SSH connection to Actions
         uses: P3TERX/debugger-action@master
-        if: env.SSH_ACTIONS == 'true' 
+        if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'sshx64稳定版')
 
       - name: Download package
         id: package
@@ -127,6 +125,18 @@ jobs:
           name: OpenWrt_firmware${{ env.DEVICE_NAME }}-${{ env.FILE_DATE }}
           path: ${{ env.FIRMWARE }}
 
+      #- name: Create release
+      #  uses: ncipollo/release-action@v1
+      #  with:
+      #    name: ${{ env.DATE }} 🚀 x64稳定版 | 自动编译
+      #    allowUpdates: true
+      #    tag: x64稳定版
+      #    commit: master
+      #token: ${{ secrets.RELEASES_TOKEN }}
+      #    body: |
+      #      当前使用版本:【编译前的最后一次[➦主源码](https://github.com/coolsnowwolf/lede)更新记录】
+      #      ${{ env.useVersionInfo }}
+      #    artifacts: ${{ env.FIRMWARE }}/*
       #奶牛快传
       - name: Upload firmware to cowtransfer
         if: steps.organize.outputs.status == 'success' && env.UPLOAD_COWTRANSFER == 'true' && !cancelled()
