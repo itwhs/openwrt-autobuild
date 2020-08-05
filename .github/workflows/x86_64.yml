@@ -11,7 +11,7 @@ on:
     branches:
       - main
     paths:
-      - "x86_64.config"
+      - "x86.config"
   watch:
     types: [started]
   schedule:
@@ -20,7 +20,7 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  CONFIG_FILE: x86_64.config
+  CONFIG_FILE: x86.config
   DIY_SH: scripts.sh
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
