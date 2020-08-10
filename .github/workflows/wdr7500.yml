@@ -20,7 +20,7 @@ env:
   REPO_BRANCH: master
   CONFIG_FILE: wdr7500.config
   DIY_SH: scripts.sh
-  SSH_ACTIONS: false
+  SSH_ACTIONS: true
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_WETRANSFER: true
