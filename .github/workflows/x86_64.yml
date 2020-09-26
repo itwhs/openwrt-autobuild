@@ -76,7 +76,7 @@ jobs:
           $GITHUB_WORKSPACE/$DIY_SH
       - name: SSH connection to Actions
         #uses: P3TERX/debugger-action@master 已失效
-        uses: be-engineer/debugger-action
+        uses: csexton/debugger-action@master
         if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'sshx64稳定版')
 
       - name: Download package
