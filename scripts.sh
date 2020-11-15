@@ -45,5 +45,7 @@ git clone https://github.com/Mrbai98/luci-theme-atmaterial.git package/OpenWrtAp
 #filebrowser
 # git clone https://github.com/project-openwrt/openwrt package/CTCGFW-package
 
+#packages合集
+git clone https://github.com/liuran001/openwrt-packages package
 
 echo "done"
