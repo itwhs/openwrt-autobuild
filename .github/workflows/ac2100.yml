@@ -23,7 +23,7 @@ env:
   REPO_BRANCH: master
   CONFIG_FILE: ac2100.config
   DIY_SH: scripts.sh
-  SSH_ACTIONS: false
+  SSH_ACTIONS: true
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_WETRANSFER: true
